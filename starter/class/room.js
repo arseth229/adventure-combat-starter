@@ -53,14 +53,18 @@ class Room {
 
   getItemByName(name) {
 
-    // Fill this in
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i].name === name) {
+        return this.items[i];
+      }
+    }
 
   }
 
   getEnemyByName(name) {
-
-    // Fill this in
-
+    const enemies = this.getEnemies();
+    return enemies.find((enemy) => enemy.name === name)
+  }
 }
 
 module.exports = {
